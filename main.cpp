@@ -103,30 +103,6 @@ int main()
     }
 }
 
-// Sending values from sensors to serial port
-/*void send_serial()
-{
-    serial_port.write("z", 1);
-    serial_port.write(&z, 4);
-    serial_port.write("\n", 1);
-
-    serial_port.write("r", 1);
-    serial_port.write(&r, 4);
-    serial_port.write("\n", 1);
-
-    serial_port.write("l", 1);
-    serial_port.write(&l, 4);
-    serial_port.write("\n", 1);
-
-    serial_port.write("t", 1);
-    serial_port.write(&t, 4);
-    serial_port.write("\n", 1);
-
-    serial_port.write("s", 1);
-    serial_port.write(&s, 4);
-    serial_port.write("\n", 1);
-}*/
-
 void send_serial()
 {
     const char ff = 255;
@@ -169,14 +145,6 @@ void send_serial()
     serial_port.write(&ff, 1);
     serial_port.write(&ff, 1);
     serial_port.write("\n", 1);
-
-    /*serial_port.write(&ff, 1);
-    serial_port.write("o", 1);
-    serial_port.write("d", 1);
-    serial_port.write(&state, 4);
-    serial_port.write(&ff, 1);
-    serial_port.write(&ff, 1);
-    serial_port.write("\n", 1);*/
 }
 
 // Get value from CAN message
